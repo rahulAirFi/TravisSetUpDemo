@@ -19,7 +19,7 @@ script:
   - set -o pipefail && xcodebuild
     -workspace TravisSetUpDemo.xcworkspace
     -scheme TravisSetUpDemo
-    -destination 'platform=iOS Simulator,name=iPhone 8,OS=11.0.1'
+    -destination 'platform=iOS Simulator,name=iPhone 5s,OS=12.1'
     build
     test |
     xcpretty
