@@ -6,7 +6,7 @@ target 'TravisSetUpDemo' do
   use_frameworks!
 
   # Pods for TravisSetUpDemo
-    pod 'Charts', '3.1.1'
+    pod 'Toast-Swift', '4.0.0'
 
   target 'TravisSetUpDemoTests' do
     inherit! :search_paths
