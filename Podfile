@@ -6,10 +6,7 @@ target 'TravisSetUpDemo' do
   use_frameworks!
 
   # Pods for TravisSetUpDemo
-
-def shared_pods
     pod 'Charts', '3.1.1'
-end
 
   target 'TravisSetUpDemoTests' do
     inherit! :search_paths
