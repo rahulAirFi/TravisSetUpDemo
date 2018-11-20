@@ -1,11 +1,22 @@
-language: objective-c  #1
-osx_image: xcode10.1 #2
-xcode_project: TravisSetUpDemo.xcodeproj #3
-xcode_scheme: TravisSetUpDemo #4
-xcode_sdk: iphonesimulator12.1 #5
+# general project configurations
+language: objective-c
+osx_image: xcode10.1
+xcode_workspace: TravisSetUpDemo.xcworkspace
+xcode_scheme: TravisSetUpDemo
+xcode_sdk: iphonesimulator11.0
+warnings_are_errors: false
+cache:
+  - cocoapods
+  
+before_install:
+# configurations for installing and updating cocoapods, xcpretty and swiftlint
+  - pod repo update
+  - gem install xcpretty
+  - gem install xcpretty-json-formatter
+  - gem install fastlane --no-ri --no-rdoc --no-document  
 
-install:
-  - ./install_swiftlint.sh
-
-script:
-  - swiftlint
+jobs:
+  include:
+    - stage: Unit Tests
+      script:
+        - fastlane scan -s TravisSetUpDemo

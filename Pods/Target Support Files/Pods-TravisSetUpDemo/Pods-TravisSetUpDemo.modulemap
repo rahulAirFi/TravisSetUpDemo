@@ -1,0 +1,6 @@
+framework module Pods_TravisSetUpDemo {
+  umbrella header "Pods-TravisSetUpDemo-umbrella.h"
+
+  export *
+  module * { export * }
+}
