@@ -13,10 +13,13 @@ before_install:
   - pod repo update
   - gem install xcpretty
   - gem install xcpretty-json-formatter
-  - gem install fastlane --no-ri --no-rdoc --no-document  
 
-jobs:
-  include:
-    - stage: Unit Tests
-      script:
-        - fastlane scan -s TravisSetUpDemo
+script:
+  # script to build and run unit tests and UI tests
+  - set -o pipefail && xcodebuild
+    -workspace TravisSetUpDemo.xcworkspace
+    -scheme TravisSetUpDemo
+    -destination 'platform=iOS Simulator,name=iPhone 8,OS=11.0.1'
+    build
+    test |
+    xcpretty
