@@ -5,8 +5,7 @@ xcode_workspace: TravisSetUpDemo.xcworkspace
 xcode_scheme: DummyTarget
 xcode_sdk: iphonesimulator11.0
 warnings_are_errors: false
-cache:
-  - cocoapods
+cache: cocoapods
   
 before_install:
 # configurations for installing and updating cocoapods, xcpretty and swiftlint
