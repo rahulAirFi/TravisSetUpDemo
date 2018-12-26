@@ -12,6 +12,7 @@ before_install:
   - pod repo update
   - gem install xcpretty
   - gem install xcpretty-json-formatter
+  - pip install --user codecov
 
 script:
   # script to build and run unit tests and UI tests
@@ -21,3 +22,10 @@ script:
     -destination 'platform=iOS Simulator,name=iPhone 5s,OS=12.1'
     test |
     xcpretty
+    
+
+# script to upload code coverage to codecov
+after_script: bash <(curl -s https://codecov.io/bash) -t 6a1be175-09fc-4b0b-b303-1c687b02664f
+
+after_success:
+  - codecov --file coverage/lcov.info --disable search    
