@@ -5,6 +5,12 @@ xcode_workspace: TravisSetUpDemo.xcworkspace
 xcode_scheme: DummyTarget
 xcode_sdk: iphonesimulator11.0
 warnings_are_errors: false
+notifications:
+  email:
+    - rahul.kumar@airfi.aero
+branches:
+  only:
+  - master
 #cache: cocoapods
   
 before_install:
