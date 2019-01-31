@@ -4,10 +4,43 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>DummyTarget.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>6</integer>
+		</dict>
+		<key>DummyTestTarget.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>7</integer>
+		</dict>
 		<key>TravisSetUpDemo.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>E46A5A7B21A5219B0041527A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E4D9AFB421956E1200A192E6</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E4D9AFC821956E1600A192E6</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E4D9AFD321956E1600A192E6</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>
